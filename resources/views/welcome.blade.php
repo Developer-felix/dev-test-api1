@@ -62,7 +62,6 @@
       <nav id="navbar" class="navbar">
         <ul>
 
-
          <li><a class="nav-link scrollto" href="#">Home</a></li>
           <li><a class="nav-link scrollto" href="index.html#about">Docs</a></li>
           <li><a class="nav-link scrollto" href="index.html#team">Team</a></li>
@@ -155,6 +154,7 @@
 
           <div class="col-lg-7">
             <h3 class="pt-0 pt-lg-5">Here are the list of the endpoints and the datapoints we are going to focus on in these API</h3>
+            <p>The URL to be used is : <code>{{env('APP_URL')}}</code> </p>
 
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
@@ -168,74 +168,121 @@
 
               <div class="tab-pane fade show active" id="tab1">
 
-                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
 
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>Register User</h4><br>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                  <h5> <br>Send a POST request to these endpoint </h5><br>
+                  <p><code> /api/v1/users/register </code></p>
+
+                <h5>These are the datapoints</h5>
+                <p>
+                    <code>
+                        {<br>
+                             "name": "", <br>
+                              "email": "",<br>
+                              "password": "",<br>
+                              "password_confirmation": "",<br>
+                        }
+                    </code>
+                </p>
 
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
+                  <h4>Login User</h4>
                 </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-
+                <h5>Send a Post Request to these endpoint</h5>
+                <p><code> /api/v1/users/login </code></p>
+                <h5>These are the datapoints</h5>
+                <code>
+                    {<br>
+                          "email": "",<br>
+                          "password": "",<br>
+                    }
+                </code>
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2"></i>
-                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
+                  <h4>Logout User</h4>
                 </div>
-                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
+                <p>Send A post request to these endpoint.</p>
+                <p><code> /api/v1/users/logout </code></p>
 
               </div><!-- End Tab 1 Content -->
 
               <div class="tab-pane fade show" id="tab2">
 
-                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                <p class="fst-italic">You do not need to have access token in order to consume these endpoints.</p>
+
+                <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Get All Products</h4>
+                  </div>
+                  <p>Send a get request to these endpoint.</p>
+                  <p><code> /api/v1/products </code></p>
 
                 <div class="d-flex align-items-center mt-4">
                   <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
+                  <h4>Get indiviadual product or product detail</h4>
                 </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                <p>Send a get request to these endpoint.</p>
+                <p><code> /api/v1/products/{id} </code></p>
 
                 <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
-
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
-                </div>
-                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
-
+                    <i class="bi bi-check2"></i>
+                    <h4>Searching a product by name</h4>
+                  </div>
+                  <p>Send a get request to these endpoint.</p>
+                  <p><code> /api/v1/products/search/{name} </code></p>
               </div><!-- End Tab 2 Content -->
 
               <div class="tab-pane fade show" id="tab3">
 
-                <p class="fst-italic">Consequuntur inventore voluptates consequatur aut vel et. Eos doloribus expedita. Sapiente atque consequatur minima nihil quae aspernatur quo suscipit voluptatem.</p>
+                <p class="fst-italic">These are secure endpoints remember to pust the access token first in the authorization before consuming these API.</p>
 
                 <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Repudiandae rerum velit modi et officia quasi facilis</h4>
-                </div>
-                <p>Laborum omnis voluptates voluptas qui sit aliquam blanditiis. Sapiente minima commodi dolorum non eveniet magni quaerat nemo et.</p>
+                    <i class="bi bi-check2"></i>
+                    <h4>Create Product</h4><br>
+                  </div>
+                    <h5> <br>Send a POST request to these endpoint </h5><br>
+                    <p><code> /api/v1/products </code></p>
 
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Incidunt non veritatis illum ea ut nisi</h4>
-                </div>
-                <p>Non quod totam minus repellendus autem sint velit. Rerum debitis facere soluta tenetur. Iure molestiae assumenda sunt qui inventore eligendi voluptates nisi at. Dolorem quo tempora. Quia et perferendis.</p>
+                  <h5>These are the datapoints</h5>
+                  <p>
+                      <code>
+                          {<br>
+                               "name": "", <br>
+                                "slug": "",<br>
+                                "price": "",<br>
+                                "description": "",<br>
+                          }
+                      </code>
+                  </p>
 
-                <div class="d-flex align-items-center mt-4">
-                  <i class="bi bi-check2"></i>
-                  <h4>Omnis ab quia nemo dignissimos rem eum quos..</h4>
-                </div>
-                <p>Eius alias aut cupiditate. Dolor voluptates animi ut blanditiis quos nam. Magnam officia aut ut alias quo explicabo ullam esse. Sunt magnam et dolorem eaque magnam odit enim quaerat. Vero error error voluptatem eum.</p>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Update Product</h4><br>
+                  </div>
+                    <h5> <br>Send a PUT request to these endpoint </h5><br>
+                    <p><code> /api/v1/products </code></p>
 
+                  <h5>These are the datapoints</h5>
+                  <p>
+                    <code>
+                        {<br>
+                             "name": "", <br>
+                              "slug": "",<br>
+                              "price": "",<br>
+                              "description": "",<br>
+                        }
+                    </code>
+                  </p>
+                  <div class="d-flex align-items-center mt-4">
+                    <i class="bi bi-check2"></i>
+                    <h4>Delete Product</h4><br>
+                  </div>
+                    <h5> <br>Send a DELETE request to these endpoint </h5><br>
+                    <p><code> /api/v1/products/{id} </code></p>
               </div><!-- End Tab 3 Content -->
 
             </div>
@@ -255,9 +302,9 @@
         <div class="row g-5">
 
           <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>Alias sunt quas <em>Cupiditate</em> oluptas hic minima</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <a class="cta-btn align-self-start" href="#">Call To Action</a>
+            <h3>Let us enjoy coding, <em>Be proud of your work and</em> Suport Developers community</h3>
+            <p> We are proud to code with you keep going, lets sharpen our skills together.</p>
+            <a class="cta-btn align-self-start" href="#about">Call To Action</a>
           </div>
 
           <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
@@ -281,15 +328,14 @@
           </div>
           <div class="col-lg-6">
             <div class="content d-flex flex-column justify-content-center h-100">
-              <h3>Voluptatem dignissimos provident quasi corporis</h3>
+              <h3>Lets focus on impoving our tecnical skills</h3>
               <p class="fst-italic">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua.
+                Coding like a ninja @your own pase is important in your career development.
               </p>
               <ul>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                <li><i class="bi bi-check-circle"></i> Are you and android developer.</li>
+                <li><i class="bi bi-check-circle"></i> Are you a web frondend developer.</li>
+                <li><i class="bi bi-check-circle"></i> Are you a backend developer.</li>
               </ul>
               <a href="#" class="read-more align-self-start"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
             </div>
@@ -308,42 +354,42 @@
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
               <i class="bi bi-binoculars color-cyan"></i>
-              <h4>Modinest</h4>
+              <h4>Stability</h4>
             </a>
           </li><!-- End Tab 1 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
               <i class="bi bi-box-seam color-indigo"></i>
-              <h4>Undaesenti</h4>
+              <h4>Quality</h4>
             </a>
           </li><!-- End Tab 2 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
               <i class="bi bi-brightness-high color-teal"></i>
-              <h4>Pariatur</h4>
+              <h4>Fast</h4>
             </a>
           </li><!-- End Tab 3 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
               <i class="bi bi-command color-red"></i>
-              <h4>Nostrum</h4>
+              <h4>Easy To Use</h4>
             </a>
           </li><!-- End Tab 4 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
               <i class="bi bi-easel color-blue"></i>
-              <h4>Adipiscing</h4>
+              <h4>Nice Responses</h4>
             </a>
           </li><!-- End Tab 5 Nav -->
 
           <li class="nav-item col-6 col-md-4 col-lg-2">
             <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
               <i class="bi bi-map color-orange"></i>
-              <h4>Reprehit</h4>
+              <h4>Profesionalism</h4>
             </a>
           </li><!-- End Tab 6 Nav -->
 
@@ -354,21 +400,20 @@
           <div class="tab-pane active show" id="tab-1">
             <div class="row gy-4">
               <div class="col-lg-8 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
-                <h3>Modinest</h3>
+                <h3>REST API Design Best Practices</h3>
                 <p class="fst-italic">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                  magna aliqua.
+                    Any API (Application Programming Interface) that follows the REST design principle is said to be RESTful.
                 </p>
                 <ul>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use JSON as the Format for Sending and Receiving Data.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use Nouns Instead of Verbs in Endpoints.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Name Collections with Plural Nouns.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use Status Codes in Error Handling.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use Nesting on Endpoints to Show Relationships.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use Filtering, Sorting, and Pagination to Retrieve the Data Requested.</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Use SSL for Security.</li>
                 </ul>
-                <p>
-                  Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                  culpa qui officia deserunt mollit anim id est laborum
-                </p>
+
               </div>
               <div class="col-lg-4 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
                 <img src="{{ secure_asset('assets/img/features-1.svg')}}') }}" alt="" class="img-fluid">
@@ -516,42 +561,44 @@
 
         <div class="section-header">
           <h2>Our Team</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <p>Developing our community in tech is one of the things that makes us happy.</p>
         </div>
 
         <div class="row gy-5">
 
           <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
             <div class="team-member">
-              <div class="member-img">
+              {{-- <div class="member-img">
                 <img src="{{ secure_asset('assets/img/team/team-1.jpg') }}" class="img-fluid" alt="">
-              </div>
+              </div> --}}
               <div class="member-info">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com/fonjomba" ><i class="bi bi-twitter"></i></a>
+                    <a href="https://m.facebook.com/public/Felix-Onjomba"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/felix-onjomba-85229a182/" ><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Developer-Felix" ><i class="bi bi-github"></i></a>
+                    <a href="https://stackoverflow.com/users/15081184/developer-felix"><i class="bi bi-stack-overflow"></i></a>
                 </div>
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Onjomba Felix</h4>
+                <span>Developer</span>
               </div>
             </div>
           </div><!-- End Team Member -->
 
           <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
             <div class="team-member">
-              <div class="member-img">
+              {{-- <div class="member-img">
                 <img src="{{ secure_asset('assets/img/team/team-2.jpg') }}" class="img-fluid" alt="">
-              </div>
+              </div> --}}
               <div class="member-info">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com/fonjomba" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://m.facebook.com/public/Felix-Onjomba" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/felix-onjomba-85229a182/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Developer-Felix" class="github"><i class="bi bi-github"></i></a>
+                    <a href="https://stackoverflow.com/users/15081184/developer-felix" class="stack-overflow"><i class="bi bi-stack-overflow"></i></a>
                 </div>
-                <h4>Sarah Jhonson</h4>
+                <h4>Onjomba Felix</h4>
                 <span>Product Manager</span>
               </div>
             </div>
@@ -559,17 +606,18 @@
 
           <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
             <div class="team-member">
-              <div class="member-img">
+              {{-- <div class="member-img">
                 <img src="{{ secure_asset('assets/img/team/team-3.jpg') }}" class="img-fluid" alt="">
-              </div>
+              </div> --}}
               <div class="member-info">
                 <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
+                    <a href="https://twitter.com/fonjomba" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="https://m.facebook.com/public/Felix-Onjomba" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/felix-onjomba-85229a182/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/Developer-Felix" class="github"><i class="bi bi-github"></i></a>
+                    <a href="https://stackoverflow.com/users/15081184/developer-felix" class="stack-overflow"><i class="bi bi-stack-overflow"></i></a>
                 </div>
-                <h4>William Anderson</h4>
+                <h4>Onjomba Felix</h4>
                 <span>CTO</span>
               </div>
             </div>
@@ -595,10 +643,10 @@
             <div class="footer-info">
               <h3>DEV-TEST-API1</h3>
               <p>
-                A108 Adam Street <br>
-                NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                Karatina University <br>
+                Karatina, Kenya<br><br>
+                <strong>Phone:</strong> +254717713943<br>
+                <strong>Email:</strong> onjombafelix1@gmail.com<br>
               </p>
             </div>
           </div>
@@ -607,7 +655,7 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Docs</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
@@ -627,7 +675,7 @@
 
           <div class="col-lg-4 col-md-6 footer-newsletter">
             <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <p>Keep testing our API and give feedbacks</p>
             <form action="" method="post">
               <input type="email" name="email"><input type="submit" value="Subscribe">
             </form>
@@ -650,16 +698,16 @@
             <!-- You can delete the links only if you purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/DEV-TEST-API1-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="www.github.com/developer-felix">DEV-TEST-API1</a>
           </div>
         </div>
 
         <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://twitter.com/fonjomba" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://m.facebook.com/public/Felix-Onjomba" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/felix-onjomba-85229a182/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/Developer-Felix" class="github"><i class="bi bi-github"></i></a>
+          <a href="https://stackoverflow.com/users/15081184/developer-felix" class="stack-overflow"><i class="bi bi-stack-overflow"></i></a>
         </div>
 
       </div>
