@@ -54,7 +54,9 @@
       <a href="index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="{{ secure_asset('assets/img/logo.png') }}" alt=""> -->
-        <h1>DEV-TEST-API1<span>.</span></h1>
+        <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+        <span><h1>DEV-TEST-API1<span>.</span></h1></span>
+
       </a>
 
       <nav id="navbar" class="navbar">
@@ -76,7 +78,7 @@
   <section id="hero-static" class="hero-static d-flex align-items-center">
     <div class="container d-flex flex-column justify-content-center align-items-center text-center position-relative" data-aos="zoom-out">
       <h2>Welcome to <span>DEV-TEST-API1</span></h2>
-      <p>Et voluptate esse accusantium accusamus natus reiciendis quidem voluptates similique aut.</p>
+      <p>As a frontend developer you need API to learn with. We have provide a REST FULL API for you to test and Learn with. Providing you with the best experience working with the fast api and proffecianal responses.</p>
       <div class="d-flex">
         <a href="#about" class="btn-get-started scrollto">Get Started</a>
         <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
@@ -95,34 +97,36 @@
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="" class="stretched-link">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="" class="stretched-link">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="" class="stretched-link">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <h4><a href="" class="stretched-link text-green">Create</a></h4>
+              <p>Submiting data into the database, (Insert Into Table ...)</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="600">
             <div class="service-item position-relative">
               <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="" class="stretched-link">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              <h4><a href="" class="stretched-link">Read</a></h4>
+              <p>Retreaving the data from the database.</p>
             </div>
           </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
+              <h4><a href="" class="stretched-link">Update</a></h4>
+              <p>Editing the existing data  in the database.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="zoom-out" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
+              <h4><a href="" class="stretched-link">Delete</a></h4>
+              <p>Deleting the data from the database permanently.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+
 
         </div>
 
@@ -135,7 +139,10 @@
 
         <div class="section-header">
           <h2>Documentation</h2>
-          <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+          <p>As a frontend developer you need to have some skills in interacting with the restfull API. DEV-TEST-API1 has provided you with the endpoints to
+             learn with. We have focussed on profesional responses and also securing of the endpoints. Basically we have a simple project the has two tables Products and Users. One has to be authenticated in order to perform some operation like POST, DELETE and CREATE products in the system.
+             The Other route are not secure like GET all products from database, Get individual products or even searching from the database.
+          </p>
         </div>
 
         <div class="row g-4 g-lg-5" data-aos="fade-up" data-aos-delay="200">
@@ -147,7 +154,7 @@
           </div>
 
           <div class="col-lg-7">
-            <h3 class="pt-0 pt-lg-5">Neque officiis dolore maiores et exercitationem quae est seda lidera pat claero</h3>
+            <h3 class="pt-0 pt-lg-5">Here are the list of the endpoints and the datapoints we are going to focus on in these API</h3>
 
             <!-- Tabs -->
             <ul class="nav nav-pills mb-3">
