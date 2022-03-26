@@ -4,3 +4,6 @@
 ## All Routes in the APP
 <img src="public/screenshots/Routes.PNG" style="width:100%" alt="Checkout Screen"/>
 
+## Register To Get The Token and User Details
+<img src="public/screenshots/Register.PNG" style="width:100%" alt="Checkout Screen"/>
+
