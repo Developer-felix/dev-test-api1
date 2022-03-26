@@ -14,7 +14,10 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return Product::all();
+        $data = Product::all();
+        return [
+            'data' => $data
+        ];
     }
 
     /**
@@ -32,7 +35,15 @@ class ProductController extends Controller
                 'price' => 'required'
             ]
         );
-        return Product::create($request->all());;
+        $data = Product::create($request->all());
+        return [
+            "success"=> True,
+            "errors"=> "None",
+            "status_code"=> 0,
+            "status_message"=> 'success',
+            "message"=> "successfully created product",
+            "data"=> $data
+        ];
     }
 
     /**
@@ -43,7 +54,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return Product::find($id);
+        $data = Product::find($id);
+        return [
+            "data" => $data
+        ];
     }
 
     /**
@@ -57,7 +71,14 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->update($request->all());
-        return $product;
+        return [
+            "success"=> True,
+            "errors"=> "None",
+            "status_code"=> 0,
+            "status_message"=> 'success',
+            "message"=> "successfully updated product",
+            "data"=> $product
+        ];
     }
 
     /**
@@ -68,7 +89,15 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        return Product::destroy($id);
+        Product::destroy($id);
+
+        return [
+            "success"=> True,
+            "errors"=> "None",
+            "status_code"=> 0,
+            "status_message"=> 'success',
+            "message"=> "successfully deleted product",
+        ];
     }
 
     /**
@@ -79,6 +108,14 @@ class ProductController extends Controller
      */
     public function search($name)
     {
-        return Product::where('name','like','%'.$name.'%')->get();
+        $product =  Product::where('name','like','%'.$name.'%')->get();
+        return [
+            "success"=> True,
+            "errors"=> "None",
+            "status_code"=> 0,
+            "status_message"=> 'success',
+            "message"=> $product = "[]" ?  "No Products Similar to search" :  "successfully retrieved products",
+            "data"=> $product
+        ];
     }
 }

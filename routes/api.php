@@ -22,6 +22,7 @@ Route::group(['middleware'=>'auth:sanctum'], function () {
     Route::put('v1/products/{product}',[ProductController::class,'update']);
     Route::post('v1/products',[ProductController::class,'store']);
     Route::delete('v1/products/{product}',[ProductController::class,'destroy']);
+    Route::post('v1/users/logout',[AuthController::class,'logout']);
 });
 
 //Public Routes
