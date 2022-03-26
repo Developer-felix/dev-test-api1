@@ -26,4 +26,4 @@
 <img src="public/screenshots/Logout.PNG" style="width:100%" alt="Checkout Screen"/>
 
 ## Login
-<img src="public/screenshots/Login.PNG" style="width:100%" alt="Checkout Screen"/>
+<img src="public/screenshots/login.PNG" style="width:100%" alt="Checkout Screen"/>
